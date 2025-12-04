@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apurva Chavan × Glacis – Founding Software Engineer (Agentic AI)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #020617, #020617 40%, #0b1120 100%);
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page { min-height: 100vh; padding: 32px 16px 48px; display: flex; justify-content: center; }
+    .container { width: 100%; max-width: 1120px; }
+    .card {
+      background: rgba(15,23,42,0.97);
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.65);
+      padding: 28px 24px 32px;
+      backdrop-filter: blur(10px);
+    }
+    @media (min-width: 768px) { .card { padding: 32px 32px 40px; } }
+    .grid { display: grid; gap: 28px; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+    /* Header */
+    .header { display: flex; flex-direction: column; gap: 18px; margin-bottom: 24px; }
+    .eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.18em; color: #9ca3af; }
+    .hero-title { font-size: 1.9rem; font-weight: 700; color: #f9fafb; }
+    @media (min-width: 768px) { .hero-title { font-size: 2.2rem; } }
+    .hero-highlight { background: linear-gradient(135deg,#22c55e,#0ea5e9); -webkit-background-clip: text; color: transparent; }
+    .hero-sub { font-size: 0.98rem; color: #d1d5db; max-width: 720px; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.84rem; color: #9ca3af; }
+    .meta-pill { padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.6); background: rgba(15,23,42,0.9); }
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 11px; border-radius: 999px; border: 1px solid rgba(45,212,191,0.6); background: rgba(8,47,73,0.4); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #a5f3fc; }
+    .dot { width: 7px; height: 7px; border-radius: 999px; background: #22c55e; box-shadow: 0 0 12px rgba(34,197,94,0.9); }
+
+    /* Sections */
+    .section { margin-bottom: 20px; padding: 16px 18px 18px; border-radius: 14px; background: radial-gradient(circle at top left, rgba(37,99,235,0.24), rgba(15,23,42,0.96)); border: 1px solid rgba(75,85,99,0.8); }
+    .section.alt { background: radial-gradient(circle at top right, rgba(8,47,73,0.35), rgba(15,23,42,0.96)); }
+    .section h2 { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; color: #e5e7eb; }
+    .section p { font-size: 0.9rem; color: #d1d5db; margin-bottom: 4px; }
+    .section small { font-size: 0.78rem; color: #9ca3af; }
+    .section ul { margin-left: 18px; margin-top: 4px; }
+    .section li { font-size: 0.9rem; color: #d1d5db; margin-bottom: 4px; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .chip { padding: 4px 10px; border-radius: 999px; font-size: 0.78rem; border: 1px solid rgba(148,163,184,0.7); background: rgba(15,23,42,0.95); color: #e5e7eb; }
+
+    .timeline-item { margin-bottom: 10px; }
+    .timeline-role { font-size: 0.9rem; font-weight: 600; color: #e5e7eb; }
+    .timeline-meta { font-size: 0.8rem; color: #9ca3af; }
+
+    .cta-bar { margin-top: 22px; padding-top: 18px; border-top: 1px dashed rgba(75,85,99,0.9); display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+    .cta-text { font-size: 0.88rem; color: #9ca3af; max-width: 520px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn-primary {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 600;
+      background: linear-gradient(135deg,#22c55e,#0ea5e9);
+      color: #020617;
+      box-shadow: 0 12px 30px rgba(34,197,94,0.45);
+    }
+    .btn-secondary {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.8);
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+    }
+    .btn-primary:hover { opacity: 0.96; }
+    .btn-secondary:hover { background: rgba(31,41,55,0.96); }
+
+    footer { margin-top: 18px; text-align: right; font-size: 0.78rem; color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <div class="card">
+        <header class="header">
+          <div>
+            <div class="eyebrow">Apurva Ravikar Chavan · Data Scientist & ML Engineer</div>
+            <h1 class="hero-title">
+              Helping Glacis build <span class="hero-highlight">agentic AI for real‑world supply chains</span>
+            </h1>
+          </div>
+          <p class="hero-sub">
+            I build and deploy AI systems end‑to‑end: from data pipelines and forecasting models in production to
+            multi‑agent LLM systems that reason, infer, and adapt to complex environments. I’d love to bring that
+            experience to Glacis as a founding engineer and help you turn agentic AI into a practical super‑power
+            for enterprise supply chains.
+          </p>
+          <div class="meta-row">
+            <span class="badge"><span class="dot"></span> Founding engineer fit</span>
+            <span class="meta-pill">3+ years in ML & software engineering</span>
+            <span class="meta-pill">Experience with production ML, APIs & cloud</span>
+            <span class="meta-pill">Current focus: agentic & multi‑agent LLM systems</span>
+          </div>
+        </header>
+
+        <div class="grid">
+          <!-- LEFT COLUMN -->
+          <main>
+            <section class="section">
+              <h2>Why Glacis?</h2>
+              <p>
+                Glacis sits at the intersection I care about most: <strong>AI agents</strong>, 
+                <strong>complex real‑world operations</strong>, and <strong>product‑focused engineering</strong>.
+                Your mission to let agents think, plan, and act across supply‑chain workflows matches my recent work
+                on multi‑agent reasoning systems and my earlier experience deploying ML in enterprise environments.
+              </p>
+              <p>
+                I’m particularly excited about:
+              </p>
+              <ul>
+                <li>Designing agents that coordinate across multiple stakeholders and constraints (lead times, routes, risk).</li>
+                <li>Owning features end‑to‑end: from understanding an operations pain point to building the backend,
+                    integrating with ERPs/TMS, and shipping a reliable solution.</li>
+                <li>Working closely with a small, senior team where engineering decisions genuinely shape the company.</li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>How I can help Glacis</h2>
+              <ul>
+                <li>
+                  <strong>Design and implement agentic workflows.</strong><br/>
+                  At Mental Model Algorithms, I’ve been working on multi‑agent LLM systems for social‑deduction games:
+                  modeling belief, deception, and trust, and giving agents a structured way to reason about other agents.
+                  The same ideas can power Glacis agents that reason over suppliers, shipments, constraints, and scenarios.
+                </li>
+                <li>
+                  <strong>Own full‑stack delivery of AI features.</strong><br/>
+                  From my time at TCS Research & Innovation and L&T, I’m used to taking a problem from data ingestion,
+                  through modeling, into <em>production APIs</em> with monitoring and documentation. I can contribute to
+                  Glacis’ Python/Django backend, data models in PostgreSQL, and integrations with your frontend and
+                  customer systems.
+                </li>
+                <li>
+                  <strong>Integrate with ERP/TMS and customer data.</strong><br/>
+                  I’ve built and maintained data pipelines and REST services that sit on top of large, evolving
+                  enterprise datasets. I can help design and harden the connectors and data contracts that Glacis needs
+                  to plug into ERPs/TMS and keep agents operating on trustworthy, fresh data.
+                </li>
+                <li>
+                  <strong>Drive reliability, observability, and efficiency.</strong><br/>
+                  I’ve reduced cloud compute cost by optimizing containerized ML workloads and improved inference
+                  pipelines with better caching and batching. I’d apply the same mindset at Glacis so that our agents are
+                  not only smart, but also cost‑effective and monitorable at scale.
+                </li>
+                <li>
+                  <strong>Bridge customers, product, and engineering.</strong><br/>
+                  I’m comfortable talking to non‑technical stakeholders, mapping their pain points into technical
+                  requirements, and then closing the loop with demos and documentation. As a founding engineer, I can sit in
+                  on customer calls, prototype quickly, and turn feedback into iteration.
+                </li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>Relevant experience from my resume</h2>
+              <div class="timeline-item">
+                <div class="timeline-role">Data Scientist Intern · Mental Model Algorithms / Ideatrix</div>
+                <div class="timeline-meta">Multi‑agent LLM reasoning · 2025</div>
+                <p>
+                  Designing reasoning algorithms for multi‑agent dialogue games (Werewolf/Word‑Wolf style). I build
+                  cognitive models that capture suspicion, belief updates, and deception, and evaluate agent behavior
+                  over many simulated runs. This directly informs how I’d think about planning and coordination for
+                  Glacis agents.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-role">Research Assistant · University of New Haven</div>
+                <div class="timeline-meta">LLM data pipelines & fine‑tuning</div>
+                <p>
+                  Worked on data curation, fine‑tuning, and evaluation for LLM‑based systems, including building
+                  clean data flows and evaluation harnesses. This experience transfers well to designing and
+                  iterating on Glacis’ internal AI components.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-role">Machine Learning Engineer · TCS Research & Innovation</div>
+                <div class="timeline-meta">Production forecasting & APIs · 3+ years combined industry experience</div>
+                <p>
+                  Built forecasting models (e.g., energy demand) in PyTorch and deployed them behind robust APIs.
+                  Implemented containerized inference on AWS, set up monitoring, and optimized runtime and cost.
+                  This is the same level of ownership I’d bring to Glacis’ production agent and workflow services.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-role">Software Developer · L&T Software</div>
+                <div class="timeline-meta">APIs, data workflows, reporting</div>
+                <p>
+                  Delivered backend services and automated data workflows in Unix environments, supporting enterprise
+                  reporting with optimized queries and reliable pipelines.
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2>Selected projects aligned with Glacis</h2>
+              <ul>
+                <li>
+                  <strong>AI Resume Enhancer:</strong>
+                  Built an end‑to‑end product using NLP and semantic similarity to match resumes to job descriptions,
+                  with a backend API and interactive interface. Demonstrates my ability to think in terms of
+                  production products, not just models.
+                </li>
+                <li>
+                  <strong>Agentic Werewolf Game Backend:</strong>
+                  Co‑designed a multi‑agent game engine with LLM‑driven roles, real‑time sockets, and reasoning
+                  modules. This mirrors the coordination and observability challenges of multi‑agent supply‑chain
+                  systems.
+                </li>
+                <li>
+                  <strong>Low‑resource Neural Translation (BERT + GPT‑2):</strong>
+                  Built translation models for English↔Belarusian on limited data, focusing on architecture design and
+                  careful evaluation. Shows my ability to work with constrained, noisy, and domain‑specific datasets.
+                </li>
+              </ul>
+            </section>
+          </main>
+
+          <!-- RIGHT COLUMN / SNAPSHOT -->
+          <aside>
+            <section class="section alt">
+              <h2>Snapshot</h2>
+              <ul>
+                <li><strong>Role fit:</strong> Founding Software Engineer – Agentic AI</li>
+                <li><strong>Location:</strong> Open to relocation to Ho Chi Minh City</li>
+                <li><strong>Experience:</strong> 3+ years across ML engineering, data science & software dev</li>
+                <li><strong>Current focus:</strong> Agentic / multi‑agent LLM systems, production ML</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Python · PyTorch</span>
+                <span class="chip">FastAPI / Flask / Django</span>
+                <span class="chip">PostgreSQL · SQL</span>
+                <span class="chip">Docker · AWS/GCP</span>
+                <span class="chip">LLMs & Agents</span>
+              </div>
+            </section>
+
+            <section class="section alt">
+              <h2>Technical strengths</h2>
+              <ul>
+                <li>Designing and deploying ML models in production environments.</li>
+                <li>Building RESTful APIs and microservices around ML/LLM components.</li>
+                <li>Working with relational data models and analytical queries.</li>
+                <li>Experimenting with LLM prompts, tools, and agentic patterns.</li>
+                <li>Collaborating across research, product, and engineering.</li>
+              </ul>
+            </section>
+
+            <section class="section alt">
+              <h2>What I’d love to work on at Glacis</h2>
+              <ul>
+                <li>Agent behaviors for planning shipments, rerouting, and handling disruptions.</li>
+                <li>Integration layers that connect agents to ERP/TMS and real‑time data streams.</li>
+                <li>Simulation environments to stress‑test agents before deploying to production.</li>
+                <li>Dashboards and APIs that make agent decisions transparent to customers.</li>
+              </ul>
+            </section>
+
+            <section class="section alt">
+              <h2>Contact</h2>
+              <p>
+                I’d be happy to share my full resume, portfolio, and code samples that demonstrate the systems and
+                agents I’ve built.
+              </p>
+              <p><strong>Email:</strong> apurvachavan125@gmail.com</p>
+              <p><strong>Location:</strong> United States · Open to relocation</p>
+            </section>
+          </aside>
+        </div>
+
+        <div class="cta-bar">
+          <div class="cta-text">
+            If this resonates with what you’re building, I’d love to discuss how I can help Glacis design, build,
+            and scale agentic AI systems for supply chains.
+          </div>
+          <div class="buttons">
+            <button class="btn-primary">Let&apos;s Talk</button>
+            <button class="btn-secondary">View full resume</button>
+          </div>
+        </div>
+
+        <footer>
+          Tailored pitch page for Glacis · Founding Software Engineer – Agentic AI · Apurva Ravikar Chavan
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
